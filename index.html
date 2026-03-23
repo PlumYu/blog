@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/blog/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="个人博客 - 记录技术与生活" />
     <title>My Blog</title>
@@ -11,8 +11,10 @@
       ;(function() {
         var redirect = sessionStorage.redirect
         delete sessionStorage.redirect
-        if (redirect && redirect != location.href) {
-          history.replaceState(null, null, redirect)
+        if (redirect) {
+          // 只取路径部分，不包含 origin
+          var url = new URL(redirect, location.origin)
+          history.replaceState(null, null, url.pathname + url.search + url.hash)
         }
       })()
     </script>

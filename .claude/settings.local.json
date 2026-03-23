@@ -7,7 +7,9 @@
       "Bash(gh workflow:*)",
       "Bash(gh run:*)",
       "Bash(curl -s https://plumyu.github.io/blog/posts.json)",
-      "Bash(curl -sI https://plumyu.github.io/blog/posts.json)"
+      "Bash(curl -sI https://plumyu.github.io/blog/posts.json)",
+      "Bash(curl -s \"https://plumyu.github.io/blog/post/welcome\" -I)",
+      "Bash(taskkill /f /im node.exe)"
     ]
   }
 }

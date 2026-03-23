@@ -60,7 +60,7 @@
           placeholder="文章标题"
           class="title-input"
         />
-        <BlogEditor v-model="postForm.content" height="500px" />
+        <BlogEditor ref="blogEditorRef" v-model="postForm.content" height="600px" />
       </div>
 
       <!-- 设置区域 -->
@@ -131,6 +131,7 @@ const saving = ref(false)
 const message = ref('')
 const messageType = ref<'success' | 'error'>('success')
 const showPreview = ref(false)
+const blogEditorRef = ref<InstanceType<typeof BlogEditor> | null>(null)
 
 const postForm = reactive({
   title: '',
@@ -196,6 +197,7 @@ async function handleSave() {
     .trim()
 
   // 生成 Markdown 文件内容
+  const markdownBody = blogEditorRef.value?.getMarkdown() || htmlToMarkdown(postForm.content)
   const markdown = `---
 title: ${postForm.title}
 date: ${postForm.date}
@@ -204,7 +206,7 @@ tags: [${tags.join(', ')}]
 excerpt: ${excerpt}
 ---
 
-${htmlToMarkdown(postForm.content)}
+${markdownBody}
 `
 
   saving.value = true

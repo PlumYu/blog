@@ -37,6 +37,12 @@ const routes: RouteRecordRaw[] = [
     name: 'About',
     component: () => import('@/views/About.vue'),
     meta: { title: '关于' }
+  },
+  {
+    path: '/editor',
+    name: 'Editor',
+    component: () => import('@/views/Editor.vue'),
+    meta: { title: '在线编辑' }
   }
 ]
 

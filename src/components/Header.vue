@@ -8,6 +8,7 @@
       <nav class="nav">
         <router-link to="/" class="nav-link">首页</router-link>
         <router-link to="/posts" class="nav-link">文章</router-link>
+        <router-link to="/editor" class="nav-link editor-link">写文章</router-link>
         <router-link to="/about" class="nav-link">关于</router-link>
       </nav>
 
@@ -85,6 +86,14 @@ import ThemeToggle from './ThemeToggle.vue'
   &:hover::after,
   &.router-link-active::after {
     width: 100%;
+  }
+
+  &.editor-link {
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
   }
 }
 

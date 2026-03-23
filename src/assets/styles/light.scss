@@ -1,0 +1,23 @@
+// 亮色主题样式
+.theme-light {
+  --bg-primary: #{$light-bg};
+  --bg-secondary: #{$light-bg-secondary};
+  --text-primary: #{$light-text};
+  --text-secondary: #{$light-text-secondary};
+  --border-color: #{$light-border};
+  --card-bg: #{$light-card-bg};
+  --code-bg: #{$light-code-bg};
+
+  // Header
+  --header-bg: #{$light-bg};
+  --header-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  // 链接
+  --link-color: #{$primary-color};
+  --link-hover: #{$secondary-color};
+
+  // 代码高亮
+  --code-keyword: #{$primary-color};
+  --code-string: #{$success-color};
+  --code-comment: #{$light-text-secondary};
+}

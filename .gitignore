@@ -1,0 +1,13 @@
+node_modules
+dist
+.DS_Store
+*.local
+*.log
+public/posts.json
+
+# 编译产物
+*.tsbuildinfo
+scripts/*.js
+scripts/*.d.ts
+vite.config.js
+vite.config.d.ts

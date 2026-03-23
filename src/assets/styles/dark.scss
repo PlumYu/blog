@@ -1,0 +1,23 @@
+// 暗色主题样式
+.theme-dark {
+  --bg-primary: #{$dark-bg};
+  --bg-secondary: #{$dark-bg-secondary};
+  --text-primary: #{$dark-text};
+  --text-secondary: #{$dark-text-secondary};
+  --border-color: #{$dark-border};
+  --card-bg: #{$dark-card-bg};
+  --code-bg: #{$dark-code-bg};
+
+  // Header
+  --header-bg: #{$dark-bg-secondary};
+  --header-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+  // 链接
+  --link-color: lighten($primary-color, 10%);
+  --link-hover: lighten($secondary-color, 10%);
+
+  // 代码高亮
+  --code-keyword: lighten($primary-color, 15%);
+  --code-string: lighten($success-color, 10%);
+  --code-comment: #{$dark-text-secondary};
+}

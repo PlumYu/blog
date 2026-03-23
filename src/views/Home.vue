@@ -55,7 +55,7 @@ const latestPosts = computed(() => posts.value.slice(0, 6))
 
 async function loadPosts() {
   try {
-    const response = await fetch('/posts.json')
+    const response = await fetch(import.meta.env.BASE_URL + 'posts.json')
     const data = await response.json()
     posts.value = data.list || []
 

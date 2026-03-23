@@ -54,7 +54,7 @@ let postsData: { list: PostListItem[] } | null = null
 // 加载文章数据
 async function loadPosts() {
   try {
-    const response = await fetch('/posts.json')
+    const response = await fetch(import.meta.env.BASE_URL + 'posts.json')
     postsData = await response.json()
 
     if (postsData) {

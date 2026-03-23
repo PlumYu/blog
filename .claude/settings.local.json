@@ -5,7 +5,9 @@
       "Bash(gh repo:*)",
       "Bash(gh api:*)",
       "Bash(gh workflow:*)",
-      "Bash(gh run:*)"
+      "Bash(gh run:*)",
+      "Bash(curl -s https://plumyu.github.io/blog/posts.json)",
+      "Bash(curl -sI https://plumyu.github.io/blog/posts.json)"
     ]
   }
 }

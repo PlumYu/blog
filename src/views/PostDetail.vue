@@ -71,7 +71,7 @@ const loading = ref(true)
 
 async function loadPost() {
   try {
-    const response = await fetch('/posts.json')
+    const response = await fetch(import.meta.env.BASE_URL + 'posts.json')
     const data = await response.json()
     post.value = data.posts?.[slug] || null
 
